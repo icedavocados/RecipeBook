@@ -1,1 +1,124 @@
-.
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #408107;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    margin-bottom: 1%;
+}
+
+nav .links {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.searchbar {
+    width: 35%;
+}
+
+.searchbar input {
+    text-align: left;
+    width: 100%;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.cards .category1,
+.cards .category2,
+.cards .category3,
+.cards .category4,
+.cards .category5,
+.cards .category6 {
+    background-color: red;
+    text-align: center;
+    width: 10%;
+    font-size: 1.2rem;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3%;
+}
+
+.banner .bannercard {
+    background-color: red;
+    padding-left: 30%;
+    padding-right: 30%;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+}
+
+.mainbody {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.mainbody .foryou .title,
+.mainbody .category1 .title,
+.mainbody .category2 .title {
+    display: flex;
+    align-items: flex-end;
+}
+
+.mainbody .foryou .title .more,
+.mainbody .category1 .title .more,
+.mainbody .category2 .title .more {
+    color: #408107;
+    padding-left: 0.5%;
+}
+
+.mainbody .foryou .cards,
+.mainbody .category1 .cards,
+.mainbody .category2 .cards {
+    display: block;
+}
+
+.mainbody .foryou .cards .row,
+.mainbody .category1 .cards .row,
+.mainbody .category2 .cards .row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 3%;
+}
+
+.mainbody .foryou .cards .row .card,
+.mainbody .category1 .cards .row .card,
+.mainbody .category2 .cards .row .card {
+    padding-left: 3%;
+    padding-right: 3%;
+    background-color: red;
+}
+
+.mainbody .foryou .cards .row .card h4,
+.mainbody .category1 .cards .row .card h4,
+.mainbody .category2 .cards .row .card h4 {
+    margin-bottom: 0;
+}
+
+.footer {
+    background-color: #408107;
+    font-size: 0.8rem;
+    padding-top: 0.1%;
+    padding-bottom: 0.1%;
+    text-align: center;
+}

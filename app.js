@@ -37,13 +37,20 @@ const validateRecipe = (req, res, next) => {
     }
 }
 
-app.get('/', (req, res) => {
-    res.render('home.ejs');
-})
+app.get('/', catchAsync(async(req, res) => {
+    const recipes = await Recipe.find({});
+    res.render('home.ejs', { recipes });
+}))
 
-app.get('/recipes', (req, res) => {
-    res.render('recipes.ejs');
-})
+app.get('/recipes', catchAsync(async(req, res) => {
+    const recipes = await Recipe.find({});
+    res.render('recipes.ejs', { recipes });
+}))
+
+app.get('/recipes/:id', catchAsync(async(req, res) => {
+    const recipe = await Recipe.findById(req.params.id);
+    res.render('show.ejs', { recipe })
+}))
 
 app.listen(3000, () => {
     console.log('Serving on port 3000');

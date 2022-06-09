@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #408107;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    margin-bottom: 1%;
+}
+
+nav .links {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.searchbar {
+    width: 35%;
+}
+
+.searchbar input {
+    text-align: left;
+    width: 100%;
+}
+
+.mainbody {
+    min-height: 100vh;
+}
+
+.mainbody .essentials {
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.mainbody .steps {
+    background-color: red;
+    height: 100px;
+    margin-bottom: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainbody .comment {
+    background-color: #408107;
+    height: 100px;
+    margin-bottom: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer {
+    background-color: #408107;
+    font-size: 0.8rem;
+    padding-top: 0.1%;
+    padding-bottom: 0.1%;
+    text-align: center;
+}

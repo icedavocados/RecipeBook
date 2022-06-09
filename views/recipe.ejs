@@ -48,72 +48,51 @@
             </div>
         </div>
         <div class="cards">
-            <div class="row">
-                <div class="card">
-                    <img src="" alt="Image not found">
-                    <h4> <a href="/recipes">Card Title</a></h4>
-                    By author
-                </div>
-                <div class="card">
-                    <img src="" alt="Image not found">
-                    <h4> <a href="/recipes">Card Title</a></h4>
-                    By author
-                </div>
-                <div class="card">
-                    <img src="" alt="Image not found">
-                    <h4> <a href="/recipes">Card Title</a></h4>
-                    By author
-                </div>
-                <div class="card">
-                    <img src="" alt="Image not found">
-                    <h4> <a href="/recipes">Card Title</a></h4>
-                    By author
-                </div>
-            </div>
-            <div class="row">
-                <div class="card">
-                    <img src="" alt="Image not found">
-                    <h4> <a href="/recipes">Card Title</a></h4>
-                    By author
-                </div>
-                <div class="card">
-                    <img src="" alt="Image not found">
-                    <h4> <a href="/recipes">Card Title</a></h4>
-                    By author
-                </div>
-                <div class="card">
-                    <img src="" alt="Image not found">
-                    <h4> <a href="/recipes">Card Title</a></h4>
-                    By author
-                </div>
-                <div class="card">
-                    <img src="" alt="Image not found">
-                    <h4> <a href="/recipes">Card Title</a></h4>
-                    By author
-                </div>
-            </div>
-            <div class="row">
-                <div class="card">
-                    <img src="" alt="Image not found">
-                    <h4> <a href="/recipes">Card Title</a></h4>
-                    By author
-                </div>
-                <div class="card">
-                    <img src="" alt="Image not found">
-                    <h4> <a href="/recipes">Card Title</a></h4>
-                    By author
-                </div>
-                <div class="card">
-                    <img src="" alt="Image not found">
-                    <h4> <a href="/recipes">Card Title</a></h4>
-                    By author
-                </div>
-                <div class="card">
-                    <img src="" alt="Image not found">
-                    <h4> <a href="/recipes">Card Title</a></h4>
-                    By author
-                </div>
-            </div>
+            <% let n=7 %>
+                <% for(let i=0;i<n;i++){ %>
+                    <div class="row">
+                        <div class="card">
+                            <img src="" alt="Image not found">
+                            <h4>
+                                <a href="/recipes/<%=recipes[i]._id%> ">
+                                    <%=recipes[i].title %>
+                                </a>
+                            </h4>
+                            By
+                            <%=recipes[i].author %>
+                        </div>
+                        <div class="card">
+                            <img src="" alt="Image not found">
+                            <h4>
+                                <a href="/recipes/<%=recipes[i+n]._id %> ">
+                                    <%=recipes[i+n].title %>
+                                </a>
+                            </h4>
+                            By
+                            <%=recipes[i+n].author %>
+                        </div>
+                        <div class="card">
+                            <img src="" alt="Image not found">
+                            <h4>
+                                <a href="/recipes/<%=recipes[i+(n*2)]._id %>">
+                                    <%=recipes[i+(n*2)].title %>
+                                </a>
+                            </h4>
+                            By
+                            <%=recipes[i+(n*2)].author %>
+                        </div>
+                        <div class="card">
+                            <img src="" alt="Image not found">
+                            <h4>
+                                <a href="/recipes/<%=recipes[i+(n*3)]._id %>">
+                                    <%=recipes[i+(n*3)].title %>
+                                </a>
+                            </h4>
+                            By
+                            <%=recipes[i+(n*3)].author %>
+                        </div>
+                    </div>
+                    <% } %>
         </div>
     </div>
     <div class="footer">

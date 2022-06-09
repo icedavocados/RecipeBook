@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/">
+    <title>RecipeBook</title>
+    <link rel="stylesheet" href="css/show.css">
+</head>
+
+<body>
+    <nav>
+        <img src="" alt="Logo not available">
+        <div class="searchbar">
+            <input type="text" placeholder="Search a recipe" name="" id="">
+        </div>
+        <div class="links">
+            <a href="/recipes">Recipe</a>
+            <a href="">Calculator</a>
+            <a href="">Account</a>
+        </div>
+    </nav>
+    <div class="mainbody">
+        <div class="essentials">
+            <img src="" alt="No image">
+            <div class="words">
+                <h2>
+                    <%= recipe.title %>
+                </h2>
+                <p>
+                    <%= recipe.description %>
+                </p>
+            </div>
+        </div>
+        <div class="steps">
+            Steps here
+        </div>
+        <div class="comment">
+            Comment here
+        </div>
+    </div>
+    <div class="footer">
+        <p>Copyright © 2022 RecipeBook. All Rights Reserved</p>
+    </div>
+</body>
+
+</html>

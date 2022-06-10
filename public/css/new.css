@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #408107;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    margin-bottom: 1%;
+}
+
+nav .links {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.searchbar {
+    width: 35%;
+}
+
+.searchbar input {
+    text-align: left;
+    width: 100%;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3%;
+}
+
+.banner .bannercard {
+    background-color: red;
+    padding-left: 30%;
+    padding-right: 30%;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+}
+
+.mainbody {
+    min-height: 100vh;
+}
+
+.mainbody form input {
+    width: 50%;
+}
+
+.footer {
+    background-color: #408107;
+    font-size: 0.8rem;
+    padding-top: 0.1%;
+    padding-bottom: 0.1%;
+    text-align: center;
+}

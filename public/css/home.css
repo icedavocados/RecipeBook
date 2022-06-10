@@ -93,6 +93,13 @@ nav .links {
     display: block;
 }
 
+.mainbody .foryou .cards img,
+.mainbody .category1 .cards img,
+.mainbody .category2 .cards img {
+    width: 50px;
+    height: 50px;
+}
+
 .mainbody .foryou .cards .row,
 .mainbody .category1 .cards .row,
 .mainbody .category2 .cards .row {
@@ -106,7 +113,6 @@ nav .links {
 .mainbody .category2 .cards .row .card {
     padding-left: 3%;
     padding-right: 3%;
-    background-color: red;
 }
 
 .mainbody .foryou .cards .row .card h4,

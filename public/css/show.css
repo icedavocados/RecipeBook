@@ -46,6 +46,11 @@ nav .links {
     justify-content: space-around;
 }
 
+.mainbody .essentials img {
+    width: 150px;
+    height: 150px;
+}
+
 .mainbody .steps {
     background-color: red;
     height: 100px;
@@ -59,9 +64,12 @@ nav .links {
     background-color: #408107;
     height: 100px;
     margin-bottom: 3%;
+}
+
+.mainbody .comment .commentbody {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
 .footer {

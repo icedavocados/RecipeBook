@@ -55,8 +55,9 @@ nav .links {
 }
 
 .mainbody .filters {
-    height: 25%;
+    height: 250px;
     padding-left: 2%;
+    padding-right: 2%;
     background-color: #408107;
     display: flex;
     flex-direction: column;
@@ -73,25 +74,26 @@ nav .links {
 }
 
 .mainbody .cards {
-    display: block;
-    flex-grow: 1;
-}
-
-.mainbody .cards .row {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     margin-bottom: 1.5%;
     margin-top: 1.5%;
 }
 
-.mainbody .cards .row .card {
+.mainbody .cards .card {
+    max-width: 30%;
+    max-height: 15%;
+    display: flex;
     padding-left: 3%;
     padding-right: 3%;
+    margin-bottom: 3%;
 }
 
-.mainbody .cards .row .card img {
-    width: 50px;
-    height: 50px;
+.mainbody .cards .card img {
+    object-fit: fill;
+    max-width: 150px;
+    max-height: 250px;
 }
 
 .footer {

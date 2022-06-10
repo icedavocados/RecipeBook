@@ -12,22 +12,26 @@
 
 <body>
     <nav>
-        <img src="" alt="Logo not available">
+        <a href="/"><img src="" alt="Logo not available"></a>
         <div class="searchbar">
             <input type="text" placeholder="Search a recipe" name="" id="">
         </div>
         <div class="links">
             <a href="/recipes">Recipe</a>
-            <a href="">Calculator</a>
+            <a href="/calculator">Calculator</a>
             <a href="">Account</a>
         </div>
     </nav>
     <div class="mainbody">
         <div class="essentials">
-            <img src="" alt="No image">
+            <img src="<%= recipe.image  %> " alt="No image">
             <div class="words">
                 <h2>
                     <%= recipe.title %>
+                        <h4>
+                            by
+                            <%=recipe.author %>
+                        </h4>
                 </h2>
                 <p>
                     <%= recipe.description %>
@@ -38,7 +42,10 @@
             Steps here
         </div>
         <div class="comment">
-            Comment here
+            <h2>Comments</h2>
+            <div class="commentbody">
+                Comment here
+            </div>
         </div>
     </div>
     <div class="footer">

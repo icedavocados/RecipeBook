@@ -43,7 +43,7 @@ nav .links {
     margin-left: 10%;
     margin-right: 10%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .mainbody .essentials img {

@@ -47,10 +47,24 @@ app.get('/recipes', catchAsync(async(req, res) => {
     res.render('recipes.ejs', { recipes });
 }))
 
+app.post('/recipes', catchAsync(async(req, res) => {
+    const recipe = new Recipe(req.body.recipe);
+    await recipe.save();
+    res.redirect('/recipes')
+}))
+
+app.get('/recipes/new', (req, res) => {
+    res.render('new.ejs');
+})
+
 app.get('/recipes/:id', catchAsync(async(req, res) => {
     const recipe = await Recipe.findById(req.params.id);
     res.render('show.ejs', { recipe })
 }))
+
+app.get('/calculator', (req, res) => {
+    res.send('Under development');
+})
 
 app.listen(3000, () => {
     console.log('Serving on port 3000');

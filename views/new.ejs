@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecipeBook</title>
+    <base href="/">
+    <link rel="stylesheet" href="/css/new.css">
+</head>
+
+<body>
+    <nav>
+        <a href="/"><img src="" alt="Logo not available"></a>
+        <div class="searchbar">
+            <input type="text" placeholder="Search a recipe" name="" id="">
+        </div>
+        <div class="links">
+            <a href="/recipes">Recipe</a>
+            <a href="/calculator">Calculator</a>
+            <a href="">Account</a>
+        </div>
+    </nav>
+    <div class="mainbody">
+        <h1>Make a new Recipe</h1>
+        <a href="/recipes">Back to all recipes</a>
+        <hr>
+        <form action="/recipes" method="post">
+            <div class="formfield">
+                <label for="title">Recipe's Title: </label>
+                <input type="text" name="recipe[title]" id="title" placeholder="Insert the recipe's title here" required>
+            </div>
+            <div class="formfield">
+                <label for="author">Recipe's Author: </label>
+                <input type="text" name="recipe[author]" id="author" placeholder="Insert the recipe's author here" required>
+            </div>
+            <div class="formfield">
+                <label for="image">Recipe's Image: </label>
+                <input type="text" name="recipe[image]" id="image" placeholder="Insert the recipe's image url here" required>
+            </div>
+            <div class="formfield">
+                <label for="description">Recipe's Description</label>
+                <textarea name="recipe[description]" id="description" cols="30" rows="5" required></textarea>
+            </div>
+            <button>Submit</button>
+        </form>
+        <hr>
+        <div class="banner">
+            <div class="bannercard">
+                <h1>Banner</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Copyright © 2022 RecipeBook. All Rights Reserved</p>
+    </div>
+</body>
+
+</html>

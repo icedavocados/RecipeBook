@@ -26,6 +26,7 @@
             <h1>Banner</h1>
         </div>
     </div>
+    <h2><a href="/recipes/new">Click here to add new Recipe</a></h2>
     <div class="mainbody">
         <div class="filters">
             <div class="category">
@@ -48,51 +49,24 @@
             </div>
         </div>
         <div class="cards">
-            <% let n=7 %>
-                <% for(let i=0;i<n;i++){ %>
-                    <div class="row">
-                        <div class="card">
-                            <img src="<%=recipes[i].image%>" alt="Image not found">
-                            <h4>
-                                <a href="/recipes/<%=recipes[i]._id%> ">
-                                    <%=recipes[i].title %>
-                                </a>
-                            </h4>
+            <% for(let recipe of recipes){ %>
+                <div class="card">
+                    <img src="<%=recipe.image%>" alt="Image not found">
+                    <div class="description">
+                        <h4>
+                            <a href="/recipes/<%=recipe._id%> ">
+                                <b>
+                                    <%=recipe.title %>
+                                </b>
+                            </a>
+                        </h4>
+                        <p>
                             By
-                            <%=recipes[i].author %>
-                        </div>
-                        <div class="card">
-                            <img src="<%=recipes[i+n].image %>" alt="Image not found">
-                            <h4>
-                                <a href="/recipes/<%=recipes[i+n]._id %> ">
-                                    <%=recipes[i+n].title %>
-                                </a>
-                            </h4>
-                            By
-                            <%=recipes[i+n].author %>
-                        </div>
-                        <div class="card">
-                            <img src="<%=recipes[i+(n*2)].image%>" alt="Image not found">
-                            <h4>
-                                <a href="/recipes/<%=recipes[i+(n*2)]._id %>">
-                                    <%=recipes[i+(n*2)].title %>
-                                </a>
-                            </h4>
-                            By
-                            <%=recipes[i+(n*2)].author %>
-                        </div>
-                        <div class="card">
-                            <img src="<%=recipes[i+(n*3)].image%>" alt="Image not found">
-                            <h4>
-                                <a href="/recipes/<%=recipes[i+(n*3)]._id %>">
-                                    <%=recipes[i+(n*3)].title %>
-                                </a>
-                            </h4>
-                            By
-                            <%=recipes[i+(n*3)].author %>
-                        </div>
+                            <%=recipe.author %>
+                        </p>
                     </div>
-                    <% } %>
+                </div>
+                <% } %>
         </div>
     </div>
     <div class="footer">

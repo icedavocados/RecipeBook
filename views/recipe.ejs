@@ -11,13 +11,13 @@
 
 <body>
     <nav>
-        <img src="" alt="Logo not available">
+        <a href="/"><img src="" alt="Logo not available"></a>
         <div class="searchbar">
             <input type="text" placeholder="Search a recipe" name="" id="">
         </div>
         <div class="links">
             <a href="/recipes">Recipe</a>
-            <a href="">Calculator</a>
+            <a href="/calculator">Calculator</a>
             <a href="">Account</a>
         </div>
     </nav>
@@ -52,7 +52,7 @@
                 <% for(let i=0;i<n;i++){ %>
                     <div class="row">
                         <div class="card">
-                            <img src="" alt="Image not found">
+                            <img src="<%=recipes[i].image%>" alt="Image not found">
                             <h4>
                                 <a href="/recipes/<%=recipes[i]._id%> ">
                                     <%=recipes[i].title %>
@@ -62,7 +62,7 @@
                             <%=recipes[i].author %>
                         </div>
                         <div class="card">
-                            <img src="" alt="Image not found">
+                            <img src="<%=recipes[i+n].image %>" alt="Image not found">
                             <h4>
                                 <a href="/recipes/<%=recipes[i+n]._id %> ">
                                     <%=recipes[i+n].title %>
@@ -72,7 +72,7 @@
                             <%=recipes[i+n].author %>
                         </div>
                         <div class="card">
-                            <img src="" alt="Image not found">
+                            <img src="<%=recipes[i+(n*2)].image%>" alt="Image not found">
                             <h4>
                                 <a href="/recipes/<%=recipes[i+(n*2)]._id %>">
                                     <%=recipes[i+(n*2)].title %>
@@ -82,7 +82,7 @@
                             <%=recipes[i+(n*2)].author %>
                         </div>
                         <div class="card">
-                            <img src="" alt="Image not found">
+                            <img src="<%=recipes[i+(n*3)].image%>" alt="Image not found">
                             <h4>
                                 <a href="/recipes/<%=recipes[i+(n*3)]._id %>">
                                     <%=recipes[i+(n*3)].title %>

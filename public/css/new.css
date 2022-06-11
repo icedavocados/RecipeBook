@@ -18,6 +18,11 @@ nav {
     margin-bottom: 1%;
 }
 
+nav a img {
+    max-width: 50px;
+    max-height: 50px;
+}
+
 nav .links {
     display: flex;
     justify-content: space-evenly;

@@ -19,7 +19,7 @@
         <div class="links">
             <a href="/recipes">Recipe</a>
             <a href="/calculator">Calculator</a>
-            <a href="">Account</a>
+            <a href="/accounts">Account</a>
         </div>
     </nav>
     <div class="mainbody">
@@ -36,15 +36,41 @@
                 <p>
                     <%= recipe.description %>
                 </p>
+                <form action="/recipes/<%=recipe._id%>?_method=DELETE" method="post">
+                    <button>Delete Recipe</button>
+                </form>
             </div>
         </div>
         <div class="steps">
-            Steps here
+            <%= recipe.steps %>
         </div>
         <div class="comment">
-            <h2>Comments</h2>
+            <div class="addnewcomment">
+                <h2>Leave a Comments</h2>
+                <form action="/recipes/<%=recipe._id%>/review" method="post">
+                    <div class="rating">
+                        <label for="rating">Rating</label>
+                        <input type="range" name="review[rating]" id="rating" max="5" min="1">
+                    </div>
+                    <div class="body">
+                        <label for="body">Review</label>
+                        <input type="text" name="review[body]" id="body" required>
+                    </div>
+                    <button>Submit Review</button>
+                </form>
+            </div>
             <div class="commentbody">
-                Comment here
+                <%for (let comment of recipe.comments) { %>
+                    <div class="commentdetail">
+                        <%=comment.rating%> star
+                            <br>
+                            <%=comment.body%>
+                                <br>
+                                <form action="/recipes/<%=recipe._id%>/reviews/<%=comment._id%>?_method=DELETE" method="post">
+                                    <button>Delete Comment</button>
+                                </form>
+                    </div>
+                    <% } %>
             </div>
         </div>
     </div>

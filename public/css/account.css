@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #408107;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    margin-bottom: 1%;
+}
+
+nav a img {
+    max-width: 50px;
+    max-height: 50px;
+}
+
+nav .links {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.searchbar {
+    width: 35%;
+}
+
+.searchbar input {
+    text-align: left;
+    width: 100%;
+}
+
+.footer {
+    background-color: #408107;
+    font-size: 0.8rem;
+    padding-top: 0.1%;
+    padding-bottom: 0.1%;
+    text-align: center;
+}

@@ -1,0 +1,54 @@
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/lily-banse--YHSwy6uqvk-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.mainbody {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.mainbody .banner {
+    width: 25%;
+    background-color: red;
+    text-align: center;
+}
+
+.mainbody .main {
+    width: 50%;
+    text-align: center;
+}
+
+.mainbody .main img {
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+}
+
+.mainbody .main form input {
+    display: block;
+    width: 100%;
+    margin: 5% 0;
+    padding: 2% 0;
+    font-size: 1rem;
+}
+
+.mainbody .main form button {
+    background-color: #408107;
+    color: white;
+    padding: 2% 2%;
+    margin: 5%;
+}
+
+.mainbody .main a {
+    text-decoration: none;
+}
+
+.mainbody .main a h4 {
+    text-align: center;
+    color: white;
+}

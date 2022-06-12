@@ -66,15 +66,14 @@ nav .links {
 }
 
 .mainbody .comment {
-    background-color: #408107;
-    height: 100px;
     margin-bottom: 3%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.mainbody .comment .commentbody {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.mainbody .comment .commentbody .commentdetail {
+    display: block;
 }
 
 .footer {

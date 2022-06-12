@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
 const ejsMate = require('ejs-mate');
-const { recipeSchema, reviewSchema } = require('./schemas');
+const { recipeSchema, reviewSchema, userSchema } = require('./schemas');
 const Recipe = require('./modules/recipe');
 const Review = require('./modules/comment');
 const User = require('./modules/user');
@@ -55,7 +55,17 @@ const validateRecipe = (req, res, next) => {
 }
 
 const validateReview = (req, res, next) => {
-    const { error } = reviewSchema.validate(req.body)
+    const { error } = reviewSchema.validate(req.body);
+    if (error) {
+        const msg = error.details.map(e => e.message).join(',');
+        throw new ExpressError(msg, 400);
+    } else {
+        next();
+    }
+}
+
+const validateUser = (req, res, next) => {
+    const { error } = userSchema.validate(req.body);
     if (error) {
         const msg = error.details.map(e => e.message).join(',');
         throw new ExpressError(msg, 400);
@@ -131,7 +141,7 @@ app.get('/accounts/register', (req, res) => {
     res.render('register.ejs');
 })
 
-app.post('/accounts/register', catchAsync(async(req, res) => {
+app.post('/accounts/register', validateUser, catchAsync(async(req, res) => {
     const { username, email, password } = req.body;
     const hash = await bcrypt.hash(password, 12);
     const user = new User({

@@ -11,6 +11,7 @@ const ExpressError = require('./utils/ExpressError');
 const methodOverride = require('method-override');
 const session = require('express-session');
 const bcrypt = require('bcrypt');
+const user = require('./modules/user');
 
 mongoose.connect('mongodb://localhost:27017/RecipeBook', { useNewUrlParser: true, useUnifiedTopology: true });
 
@@ -142,13 +143,9 @@ app.get('/accounts/register', (req, res) => {
 })
 
 app.post('/accounts/register', validateUser, catchAsync(async(req, res) => {
-    const { username, email, password } = req.body;
-    const hash = await bcrypt.hash(password, 12);
-    const user = new User({
-        username,
-        email,
-        password: hash
-    });
+    const user = new User(req.body.user);
+    const hash = await bcrypt.hash(user.password, 12);
+    user.password = hash;
     await user.save();
     req.session.user_id = user._id;
     res.redirect(`/accounts/${user._id}`);
